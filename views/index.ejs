@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+    <h1>Menu Spesial Kedai Kopi</h1>
+    <p>Pilih kategori menu kesukaan Anda:</p>
+    
+    <div class="filter-buttons">
+        <a href="/" class="<%= selectedKategori === 'semua' ? 'active' : '' %>">Semua</a>
+        <a href="/?kategori=kopi" class="<%= selectedKategori === 'kopi' ? 'active' : '' %>">Kopi</a>
+        <a href="/?kategori=non-kopi" class="<%= selectedKategori === 'non-kopi' ? 'active' : '' %>">Non-Kopi</a>
+        <a href="/?kategori=makanan" class="<%= selectedKategori === 'makanan' ? 'active' : '' %>">Makanan</a>
+    </div>
+</section>
+
+<div class="card-grid">
+    <% if (menus.length > 0) { %>
+        <% menus.forEach(item => { %>
+            <div class="card">
+                <img src="<%= item.gambar %>" alt="<%= item.nama %>">
+                <div class="card-body">
+                    <span class="badge"><%= item.kategori %></span>
+                    <h3><%= item.nama %></h3>
+                    <p class="price">Rp <%= item.harga.toLocaleString('id-ID') %></p>
+                    <a href="/menu/<%= item.id %>" class="btn">Lihat Detail</a>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Menu dalam kategori ini belum tersedia.</p>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>

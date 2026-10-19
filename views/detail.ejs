@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div class="detail-container">
+    <a href="/" class="btn-back">&larr; Kembali ke Katalog</a>
+    
+    <div class="detail-card">
+        <img src="<%= menu.gambar %>" alt="<%= menu.nama %>">
+        <div class="detail-info">
+            <span class="badge"><%= menu.kategori %></span>
+            <h2><%= menu.nama %></h2>
+            <h3 class="price">Rp <%= menu.harga.toLocaleString('id-ID') %></h3>
+            <p class="description"><%= menu.deskripsi %></p>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

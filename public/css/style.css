@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #3e2723;
+    padding: 1rem 0;
+    color: white;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav a {
+    color: #d7ccc8;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-buttons a {
+    padding: 8px 16px;
+    background-color: #e0e0e0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.filter-buttons a.active {
+    background-color: #6d4c41;
+    color: white;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.badge {
+    background-color: #efebe9;
+    color: #4e342e;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.card-body h3 {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.price {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4e342e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.detail-container {
+    margin-top: 1rem;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #4e342e;
+    text-decoration: none;
+}
+
+.detail-card {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.detail-card img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.error-container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.footer {
+    background-color: #212121;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.85rem;
+}
